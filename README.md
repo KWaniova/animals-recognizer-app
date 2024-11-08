@@ -23,7 +23,7 @@ This Flutter app uses **TensorFlow Lite** to classify images of dogs and cats. W
 ### Setup:
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/dog-cat-classifier.git
+   git clone <repository name>
    cd dog-cat-classifier
    ```
 
@@ -48,7 +48,3 @@ This Flutter app uses **TensorFlow Lite** to classify images of dogs and cats. W
 - **Additional Categories**: Extend the model to classify more than just dogs and cats.
 - **User Interface Enhancements**: Improve UI design for a smoother experience.
 - **Model Optimization**: Improve the model for higher accuracy and faster inference.
-
----
-
-Feel free to adjust or add more specific details, such as installation instructions or contributions guidelines, depending on your project’s setup!

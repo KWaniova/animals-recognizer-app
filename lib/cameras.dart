@@ -5,21 +5,25 @@ import 'package:tflite_flutter/tflite_flutter.dart';
 import 'package:image/image.dart' as img;
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       home: ClassifierScreen(),
     );
   }
 }
 
 class ClassifierScreen extends StatefulWidget {
+  const ClassifierScreen({super.key});
+
   @override
-  _ClassifierScreenState createState() => _ClassifierScreenState();
+  State<ClassifierScreen> createState() => _ClassifierScreenState();
 }
 
 class _ClassifierScreenState extends State<ClassifierScreen> {
@@ -84,7 +88,7 @@ class _ClassifierScreenState extends State<ClassifierScreen> {
     // Create a tensor with an added batch dimension
     List<List<List<List<double>>>> tensorImage = [
       List.generate(
-        224, // Assuming input size of 224x224, adjust if different
+        224,
         (y) => List.generate(
           224,
           (x) {
@@ -110,7 +114,7 @@ class _ClassifierScreenState extends State<ClassifierScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Cat vs Dog Classifier"),
+        title: const Text("Cat vs Dog Classifier"),
       ),
       body: Center(
         child: Column(
@@ -118,16 +122,16 @@ class _ClassifierScreenState extends State<ClassifierScreen> {
           children: [
             _image != null
                 ? Image.file(_image!)
-                : Text("Pick an image to classify"),
-            SizedBox(height: 20),
+                : const Text("Pick an image to classify"),
+            const SizedBox(height: 20),
             Text(
               'Prediction: $_result',
-              style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+              style: const TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             ElevatedButton(
               onPressed: _pickImage,
-              child: Text("Pick Image"),
+              child: const Text("Pick Image"),
             ),
           ],
         ),
