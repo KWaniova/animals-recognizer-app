@@ -44,6 +44,16 @@ This Flutter app uses **TensorFlow Lite** to classify images of dogs and cats. W
 - The image is pre-processed and passed into a TensorFlow Lite model to predict if the image contains a dog or a cat.
 - The result is displayed to the user, along with the model’s confidence score.
 
+### Screenshots:
+
+## Screenshots
+
+<div style="display: flex; justify-content: space-between;">
+  <img src="images/image_picker.jpg" alt="picker" width="48%" />
+  <img src="images/classified.jpg" alt="classified" width="48%" />
+</div>
+
+
 ### Future Improvements:
 - **Additional Categories**: Extend the model to classify more than just dogs and cats.
 - **User Interface Enhancements**: Improve UI design for a smoother experience.
